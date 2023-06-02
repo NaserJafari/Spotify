@@ -5,9 +5,9 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, welcome to Spotify!");
-            Song song = new("Titel song", "Genre song", 123, 2001);
-            song.PlaySong();
-            song.DisplaySong();
+            Song song = new Song("title", "genre", 123, 2001);
+            Client client = new Client();
+            client.CheckUserInput();
         }
     }
 }

@@ -14,12 +14,18 @@ namespace Spotify
         public int year;
         //public Artist artist;
         
-        public Song(string title, string genre, int seconds, int year)
+        public Song()
         {
-            this.title = title;
-            this.genre = genre;
-            this.seconds = seconds;
-            this.year = year;
+
+        }
+
+        public Song(string titleOfSong, string genreOfSong, int secondsOfSong, int yearOfSong)
+        {
+            title = titleOfSong;
+            genre = genreOfSong;
+            seconds = secondsOfSong;
+            year = yearOfSong;
+            //hier moet nog de naam van de artiest komen
         }
 
         public void PlaySong()
@@ -30,6 +36,11 @@ namespace Spotify
         public void DisplaySong()
         {
             Console.WriteLine("Playing: " + title + ", Genre: " + genre + ", Seconds: " + seconds + ", Year: " + year);
+        }
+
+        public override string ToString() 
+        { 
+            return "Title: " + title + ", Genre:" + genre + ", Seconds: " + seconds + ", Year: " + year;
         }
     }
 }
