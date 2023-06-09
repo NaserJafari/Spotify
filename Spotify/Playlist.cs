@@ -12,27 +12,21 @@ namespace Spotify
         //public Album album;
         public List<Song> songs;
         public string name;
+        public Artist artist;
 
         public Playlist() 
         {
-            //titel, genre, seconds, year, de naam van de artiest moet nog komen
-            /* songs = new Song[]
-             {
-                 new Song("appelsap", "pop", 123, 2001),
-                 new Song("bananensap", "b-pop", 132, 2002),
-                 new Song("citroensap", "c-pop", 213, 2003),
-                 new Song("druivensap", "d-pop", 231, 2004),
-                 new Song("eurosap", "e-pop", 312, 2005),
-             };*/
+            artist = new Artist("dj");
 
             songs = new List<Song>();
-            songs.Add(new Song() { title = "appelsap", genre = "a-pop", seconds = 123, year = 2001 });
-            songs.Add(new Song() { title = "banaansap", genre = "b-pop", seconds = 234, year = 2002 });
-            songs.Add(new Song() { title = "citroensap", genre = "c-pop", seconds = 345, year = 2003 });
-            songs.Add(new Song() { title = "druivensap", genre = "d-pop", seconds = 567, year = 2004 });
+            songs.Add(new Song() { title = "appelsap", genre = "a-pop", seconds = 123, year = 2001, artist = artist });
+            songs.Add(new Song() { title = "banaansap", genre = "b-pop", seconds = 234, year = 2002, artist = artist });
+            songs.Add(new Song() { title = "citroensap", genre = "c-pop", seconds = 345, year = 2003, artist = artist });
+            songs.Add(new Song() { title = "druivensap", genre = "d-pop", seconds = 567, year = 2004, artist = artist });
+
         }
 
-        //hier moet je 
+        //met de functie kan je de in inhoud van de list zien
         public void ShowPlaylist()
         {
             for (int i = 0; i < songs.Count; i++)
@@ -41,6 +35,7 @@ namespace Spotify
             }
         }
 
+        //hier kan je een song toevoegen aan list hierboevn ^^
         public void AddSongToPlaylist()
         {
             string whichPlaylist;
@@ -48,6 +43,7 @@ namespace Spotify
             string genreSong;
             int secondsOfSong;
             int yearOfSong;
+            string artistOfSong;
             //Artiest moet nog komen
             
             Console.WriteLine("In welke playlist wil je de lied toevoegen");
@@ -65,16 +61,18 @@ namespace Spotify
             Console.WriteLine("Wanneer kwam de song uit?");
             yearOfSong = Convert.ToInt32(Console.ReadLine());
 
-            songs.Add(new Song(nameSong, genreSong, secondsOfSong, yearOfSong));
+            Console.WriteLine("Van welke artiest is de song?");
+            artistOfSong = Console.ReadLine();
+            Artist artist = new Artist(artistOfSong);
+                    
+            songs.Add(new Song(nameSong, genreSong, secondsOfSong, yearOfSong, artist));
         }
 
         public void MakeNewPlaylist()
         {
-            string namePlaylist;
             Console.WriteLine("Naam voor de nieuwe playlist?");
-            namePlaylist = Console.ReadLine();
 
-            /*List<string> namePlaylist = new List<string>();*/
+            List<string> namePlaylist = new List<string>();
 
         }
     }

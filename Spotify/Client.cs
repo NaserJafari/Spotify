@@ -12,6 +12,7 @@ namespace Spotify
         public Song song;
         public Album album;
         public Playlist playlist;
+        public Artist artist;
         
         public Client() 
         {
@@ -27,12 +28,12 @@ namespace Spotify
 
             if (userInput == "1")
             {
-                song = new Song("title", "genre", 123, 2001);
+                song = new Song("title", "genre", 123, 2001, artist);
                 song.PlaySong();
             }
             else if (userInput == "2") 
             {
-                song = new Song("title", "genre", 123, 2001);
+                song = new Song("title", "genre", 123, 2001, artist);
                 song.DisplaySong();
             }
             else if (userInput == "3") 
@@ -40,7 +41,8 @@ namespace Spotify
                 playlist.ShowPlaylist();
             }
             else if (userInput == "4") 
-            { 
+            {
+                playlist.ShowPlaylist();
                 playlist.AddSongToPlaylist();
                 playlist.ShowPlaylist();
             }

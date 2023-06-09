@@ -8,9 +8,16 @@ namespace Spotify
 {
     internal class Artist
     {
-        public Artist() 
+        public string name;
+
+        public Artist(string nameOfArtist)
         {
-            string name;
+            name = nameOfArtist;
+        }
+
+        public override string ToString()
+        { 
+            return name;
         }
     }
 }
