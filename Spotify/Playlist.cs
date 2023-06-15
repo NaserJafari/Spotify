@@ -1,23 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Spotify
 {
-    internal class Playlist
+    internal class Playlist : Song
     {
         /*public Song[] songs;*/
         //public Album album;
         public List<Song> songs;
-        public string name;
+        public string nameOfPlaylist;
         public Artist artist;
 
-        public Playlist() 
+        public Playlist(string nameOfSong, string genreOfSong, int secondOfsong, int yearOfSong, Artist songOfArtist) 
         {
             artist = new Artist("dj");
-
+            title = nameOfSong;
+            genre = genreOfSong;
+            seconds = secondOfsong;
+            year = yearOfSong;
+            artist = songOfArtist;
+            
             songs = new List<Song>();
             songs.Add(new Song() { title = "appelsap", genre = "a-pop", seconds = 123, year = 2001, artist = artist });
             songs.Add(new Song() { title = "banaansap", genre = "b-pop", seconds = 234, year = 2002, artist = artist });
@@ -70,10 +76,39 @@ namespace Spotify
 
         public void MakeNewPlaylist()
         {
+            List<Song> nameOfPlaylist = new List<Song>();
+
             Console.WriteLine("Naam voor de nieuwe playlist?");
+            string namePlaylist = Console.ReadLine();
 
-            List<string> namePlaylist = new List<string>();
+            Console.WriteLine("titel van de song");
+            string titleOfSong = Console.ReadLine();
 
+            Console.WriteLine("genre van de song");
+            string genreOfSong = Console.ReadLine();
+
+            Console.WriteLine("hoeveel seconden is de song?");
+            int secondsOfSong = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("wanneer kwam de song uit");
+            int yearOfSong = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("van welke artiest");
+            string artistOfSong = Console.ReadLine();
+
+            Artist artist = new(artistOfSong);
+
+            nameOfPlaylist.Add(new Song(titleOfSong, genreOfSong, secondsOfSong, yearOfSong, artist));
+
+            foreach (var song in nameOfPlaylist)
+            {
+                Console.WriteLine(song);
+            }
+        }
+
+        public override string ToString()
+        {
+            return "Title: " + title + ", Genre:" + genre + ", Seconds: " + seconds + ", Year: " + year + " , Artist: " + artist;
         }
     }
 }

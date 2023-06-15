@@ -16,9 +16,10 @@ namespace Spotify
         
         public Client() 
         {
+            artist = new Artist("dj");
             song = new Song();   
             album = new Album();
-            playlist = new Playlist();
+            playlist = new Playlist("titel", "genre", 123, 2001, artist);
         }
 
         public void CheckUserInput()
