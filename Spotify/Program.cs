@@ -9,6 +9,9 @@
             Song song = new Song("appelsap", "a-pop", 534, 1999, artist);
             Playlist playlist = new Playlist("titel", "genre", 321, 2000, artist);
             playlist.MakeNewPlaylist();
+            playlist.ShowPlaylist();
+            Tets tets = new Tets();
+            tets.TestProject();
 
            /* song.PlaySong();
             Client client = new Client();

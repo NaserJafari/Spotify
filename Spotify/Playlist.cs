@@ -41,7 +41,7 @@ namespace Spotify
             }
         }
 
-        //hier kan je een song toevoegen aan list hierboevn ^^
+        //hier hoor je een song aan een playlist toe te voegen
         public void AddSongToPlaylist()
         {
             string whichPlaylist;
@@ -50,7 +50,6 @@ namespace Spotify
             int secondsOfSong;
             int yearOfSong;
             string artistOfSong;
-            //Artiest moet nog komen
             
             Console.WriteLine("In welke playlist wil je de lied toevoegen");
             whichPlaylist = Console.ReadLine();
