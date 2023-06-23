@@ -20,6 +20,7 @@ namespace Spotify
             song = new Song();   
             album = new Album();
             playlist = new Playlist("titel", "genre", 123, 2001, artist);
+            user = new User();
         }
 
         public void CheckUserInput()
@@ -29,19 +30,23 @@ namespace Spotify
 
             if (userInput == "1")
             {
+
+            }
+            else if (userInput == "2")
+            {
                 song = new Song("title", "genre", 123, 2001, artist);
                 song.PlaySong();
             }
-            else if (userInput == "2") 
+            else if (userInput == "3") 
             {
                 song = new Song("title", "genre", 123, 2001, artist);
                 song.DisplaySong();
             }
-            else if (userInput == "3") 
+            else if (userInput == "4") 
             {
                 playlist.ShowPlaylist();
             }
-            else if (userInput == "4") 
+            else if (userInput == "5") 
             {
                 playlist.ShowPlaylist();
                 playlist.AddSongToPlaylist();

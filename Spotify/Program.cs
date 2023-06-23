@@ -10,8 +10,10 @@
             Playlist playlist = new Playlist("titel", "genre", 321, 2000, artist);
             playlist.MakeNewPlaylist();
             playlist.ShowPlaylist();
-            Tets tets = new Tets();
-            tets.TestProject();
+            Album album = new Album();
+            album.ShowAlbum();
+            User user = new User();
+            user.DisplayUserPLaylist();
 
            /* song.PlaySong();
             Client client = new Client();

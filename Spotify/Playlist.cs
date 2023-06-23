@@ -14,6 +14,7 @@ namespace Spotify
         public List<Song> songs;
         public string nameOfPlaylist;
         public Artist artist;
+        public Album album;
 
         public Playlist(string nameOfSong, string genreOfSong, int secondOfsong, int yearOfSong, Artist songOfArtist) 
         {
@@ -73,6 +74,8 @@ namespace Spotify
             songs.Add(new Song(nameSong, genreSong, secondsOfSong, yearOfSong, artist));
         }
 
+        //met de fucntie kan de user een nieuwe playlist maken en daarin gelijk songs aanmaken.
+        //maar dit werkt niet
         public void MakeNewPlaylist()
         {
             List<Song> nameOfPlaylist = new List<Song>();
@@ -105,6 +108,7 @@ namespace Spotify
             }
         }
 
+        //met deze methode override ik de fields van de song klasse als een string
         public override string ToString()
         {
             return "Title: " + title + ", Genre:" + genre + ", Seconds: " + seconds + ", Year: " + year + " , Artist: " + artist;
