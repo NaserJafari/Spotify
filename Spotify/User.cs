@@ -16,10 +16,10 @@ namespace Spotify
         public List<Playlist> playlist;
         public Artist artist;
 
-        public User(string nameOfUser, string passwordOfUser) 
+        public User() 
         {
-            name = nameOfUser;
-            password = passwordOfUser;
+            this.name = name;
+            this.password = password;
             artist = new Artist("dj");
             playlist = new List<Playlist>();
         }

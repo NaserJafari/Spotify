@@ -13,6 +13,7 @@ namespace Spotify
         public Album album;
         public Playlist playlist;
         public Artist artist;
+        public User user;
         
         public Client() 
         {

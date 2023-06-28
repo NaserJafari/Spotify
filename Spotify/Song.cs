@@ -30,22 +30,11 @@ namespace Spotify
 
         public void PlaySong()
         {
-            Console.WriteLine("Welke song wil je afspelen?");
-            /*string userInput = Console.ReadLine();
+            Console.WriteLine("Playing " + title + " by " + artist);
 
-            while (userInput == "0") 
-            {
-                if (userInput == title)
-                {
-                    Console.WriteLine(title);
-                }
-                else 
-                {
-                    Console.WriteLine("Song titel bestaat niet");
-                }
-            }*/
-            
-            Console.WriteLine("Playing " + title + " , by " + artist);
+            Thread.Sleep(5000); // Play for 5 seconds
+
+            Console.WriteLine("Finished playing " + title);
         }
 
         public void DisplaySong()
