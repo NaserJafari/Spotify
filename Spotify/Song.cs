@@ -32,7 +32,7 @@ namespace Spotify
         {
             Console.WriteLine("Playing " + title + " by " + artist);
 
-            Thread.Sleep(5000); // Play for 5 seconds
+            Thread.Sleep(5000);
 
             Console.WriteLine("Finished playing " + title);
         }
